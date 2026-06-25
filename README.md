@@ -1,76 +1,623 @@
-# Real-Time Risk Intelligence & Fraud Detection Platform
+<div align="center">
 
-![Project Banner](https://via.placeholder.com/1200x300/0A2540/00FFAA?text=DeFiGuard+AI+-+Real-Time+DeFi+Risk+Analyzer)
+#  DeFiGuard AI
+### AI-Powered Real-Time Blockchain Intelligence Platform
 
-**A futuristic Data Science & Machine Learning project focused on combating fraud in Decentralized Finance using SQL, AI Vector Embeddings, and Real-time Analytics.**
+*An end-to-end AI platform for real-time blockchain analytics, behavioral intelligence, fraud detection, predictive risk modeling, and natural language querying.*
 
----
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
+![pgvector](https://img.shields.io/badge/pgvector-AI-green)
+![PyTorch](https://img.shields.io/badge/PyTorch-ML-red)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-orange)
+![Docker](https://img.shields.io/badge/Docker-Container-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## Overview
-
-**DeFiGuard AI** is an intelligent, real-time monitoring platform that analyzes blockchain transactions in Decentralized Finance (DeFi). It detects suspicious patterns, assigns dynamic risk scores to wallets, and provides actionable insights through a live dashboard.
-
-Built by a Data Science/ML student, it demonstrates **advanced SQL analytics**, **modern AI techniques (vector embeddings)**, **real-time data processing**, and **graph-based machine learning**.
-
-### Key Objectives
-- Detect fraud and risky behavior in DeFi (wash trading, rug pulls, money laundering, etc.)
-- Provide real-time risk intelligence
-- Enable natural language querying
-- Serve as a strong portfolio project for 2026 FinTech / Data Science roles
+</div>
 
 ---
 
-## Features
+#  Overview
 
-- Real-time transaction monitoring with live dashboard updates
-- AI-powered fraud detection using vector embeddings
-- Dynamic multi-factor risk scoring
-- Natural Language to SQL interface (Text-to-SQL)
-- Anomaly detection and behavioral analysis
-- Alerts for high-risk activities
-- Designed for multi-chain support (Ethereum, Base, Solana, etc.)
-- Extensible with Graph Neural Networks (GNNs)
+DeFiGuard AI is a next-generation blockchain intelligence platform that continuously monitors decentralized finance (DeFi) ecosystems in real time.
+
+Unlike traditional blockchain explorers that simply display transactions, DeFiGuard AI understands blockchain behavior using SQL analytics, Machine Learning, Graph Neural Networks, Vector Embeddings, and Large Language Models.
+
+The platform detects suspicious activities, predicts financial risks, analyzes wallet behavior, and enables users to explore blockchain data using natural language.
+
+Think of it as:
+
+> **Bloomberg Terminal + ChatGPT + Chainalysis + Nansen for Web3**
 
 ---
 
-## Architecture
+#  Vision
 
-```mermaid
-flowchart TD
-    subgraph "Data Sources"
-        A[Blockchain Data\n(Ethereum, Base, Solana, etc.)] 
-        B[APIs: The Graph, Covalent, Dune, QuickNode]
-        C[Historical Datasets]
-    end
+Build an AI-powered blockchain intelligence system capable of
 
-    subgraph "Ingestion Layer"
-        D[Python ETL + Real-time Listener\n(Web3.py, Solana-py, SQLAlchemy)]
-        E[WebSocket / Streaming]
-    end
+- Monitoring multiple blockchains in real time
+- Detecting financial fraud
+- Understanding wallet behavior
+- Predicting future risks
+- Explaining suspicious activities
+- Answering blockchain questions in natural language
+- Providing live dashboards and alerts
 
-    subgraph "Core Database\n(PostgreSQL + pgvector)"
-        F[(Transactions Table)]
-        G[(Wallets / Users)]
-        H[(Risk Assessments)]
-        I[(Vector Embeddings)]
-        J[Materialized Views + Indexes]
-    end
+---
 
-    subgraph "Analytics & AI Layer"
-        K[Advanced SQL\n(CTEs, Window Functions, Recursive)]
-        L[Vector Search\n(pgvector - Similarity)]
-        M[Risk Scoring Engine]
-        N[Fraud Rules + Anomaly Detection]
-        O[Graph Neural Networks\n(Future)]
-    end
+#  Problem Statement
 
-    subgraph "Application Layer"
-        P[Text-to-SQL\n(LLM Interface)]
-        Q[Live Dashboard\n(Streamlit)]
-        R[Alerts & Reports\n(Telegram / Email)]
-    end
+Blockchain networks generate millions of transactions every day.
 
-    A & B & C --> D & E
-    D & E --> F & G & H & I
-    F & G & H & I --> K & L & M & N
-    K & L & M & N --> P & Q & R
+Existing tools usually provide
+
+- Transaction history
+- Wallet balances
+- Token information
+
+But they rarely answer questions like
+
+- Is this wallet trustworthy?
+- Why is this transaction suspicious?
+- Which wallets behave similarly?
+- Which token is becoming risky?
+- Which protocol is under attack?
+- Which wallets are likely to perform fraud tomorrow?
+
+DeFiGuard AI solves these problems using AI.
+
+---
+
+#  Key Features
+
+##  Real-Time Blockchain Monitoring
+
+- Live transaction ingestion
+- New block monitoring
+- Gas price analytics
+- Whale tracking
+- High-value transfer alerts
+
+---
+
+##  Wallet Intelligence
+
+Analyze every wallet
+
+- Risk Score
+- Wallet Age
+- Total Holdings
+- Historical Transactions
+- Portfolio Analysis
+- Protocol Usage
+- Behavioral Profile
+
+---
+
+##  AI Fraud Detection
+
+Detect
+
+- Rug Pulls
+- Wash Trading
+- Money Laundering
+- Flash Loan Attacks
+- Sybil Attacks
+- Fake Volume
+- Suspicious Wallet Clusters
+
+---
+
+##  Predictive Risk Modeling
+
+Instead of only detecting fraud,
+
+predict future risks using ML.
+
+Example
+
+Wallet X
+
+Current Risk
+
+```
+65
+```
+
+Predicted Risk in 24 Hours
+
+```
+92
+```
+
+---
+
+##  Behavioral Intelligence
+
+Every wallet receives an AI-generated behavioral profile.
+
+Examples
+
+```
+Long-Term Investor
+
+Low Risk
+
+Large Holder
+```
+
+```
+High Frequency Trader
+
+High Risk
+
+Flash Loan User
+```
+
+---
+
+##  Vector Similarity Search
+
+Every wallet and transaction is converted into an embedding.
+
+This enables
+
+- Similar wallet search
+- Similar fraud search
+- Behavioral clustering
+- Semantic transaction search
+
+---
+
+##  Explainable AI
+
+Instead of
+
+```
+Risk Score = 92
+```
+
+The platform explains
+
+```
+High Risk
+
+Reason
+
+✔ Connected to 3 suspicious wallets
+
+✔ Large transfers
+
+✔ Flash loan activity
+
+✔ New wallet
+
+✔ High transaction velocity
+```
+
+---
+
+##  Natural Language Querying
+
+Ask
+
+```
+Show wallets with risk above 90
+```
+
+```
+Which wallets became suspicious today?
+```
+
+```
+Show flash loan attacks this week
+```
+
+The LLM converts questions into SQL.
+
+---
+
+##  Live Alerts
+
+Receive notifications through
+
+- Email
+- Telegram
+- Discord
+- Web Dashboard
+
+---
+
+#  System Architecture
+
+```text
+                       +-------------------------+
+                       |   Blockchain Networks   |
+                       |-------------------------|
+                       | Ethereum               |
+                       | Base                   |
+                       | Solana                |
+                       | Polygon               |
+                       | Arbitrum              |
+                       +-----------+------------+
+                                   |
+                                   |
+                      WebSockets / APIs
+                                   |
+                                   ▼
++----------------------------------------------------------+
+|                 Data Ingestion Layer                     |
+|----------------------------------------------------------|
+| Python Async Workers                                     |
+| Web3.py                                                  |
+| Solana-py                                                |
+| SQLAlchemy                                               |
+| Apache Kafka (Streaming)                                 |
++---------------------------+------------------------------+
+                            |
+                            ▼
++----------------------------------------------------------+
+|                 PostgreSQL + pgvector                    |
+|----------------------------------------------------------|
+| Wallets                                                  |
+| Transactions                                             |
+| Protocols                                                |
+| Smart Contracts                                          |
+| Events                                                   |
+| Risk Scores                                              |
+| Embeddings                                               |
++---------------------------+------------------------------+
+                            |
+             +--------------+--------------+
+             |                             |
+             ▼                             ▼
++---------------------------+    +--------------------------+
+| SQL Analytics Engine      |    | AI / ML Engine           |
+|---------------------------|    |--------------------------|
+| Window Functions          |    | Isolation Forest         |
+| Recursive CTE             |    | XGBoost                 |
+| Materialized Views        |    | GNN                     |
+| JSONB Queries             |    | Embeddings              |
+| Partitioning              |    | Vector Search           |
++-------------+-------------+    +-------------+-----------+
+              |                                |
+              +---------------+----------------+
+                              |
+                              ▼
++----------------------------------------------------------+
+|               AI Risk Intelligence Engine                |
+|----------------------------------------------------------|
+| Risk Scoring                                              |
+| Similarity Search                                         |
+| Fraud Detection                                           |
+| Behavioral Profiling                                      |
+| Explainable AI                                            |
++---------------------------+------------------------------+
+                            |
+                            ▼
++----------------------------------------------------------+
+|                  LLM & RAG Layer                         |
+|----------------------------------------------------------|
+| Text-to-SQL                                              |
+| AI Assistant                                              |
+| Retrieval-Augmented Generation                           |
++---------------------------+------------------------------+
+                            |
+                            ▼
++----------------------------------------------------------+
+|                 Dashboard & Alert System                 |
+|----------------------------------------------------------|
+| Streamlit                                                 |
+| Charts                                                    |
+| Live Dashboard                                             |
+| Telegram Alerts                                            |
+| Email Alerts                                               |
+| REST API                                                   |
++----------------------------------------------------------+
+```
+
+---
+
+#  Machine Learning Pipeline
+
+```
+Blockchain Data
+
+↓
+
+Feature Engineering
+
+↓
+
+SQL Analytics
+
+↓
+
+Vector Embeddings
+
+↓
+
+Behavior Profiles
+
+↓
+
+Fraud Detection
+
+↓
+
+Risk Prediction
+
+↓
+
+Explainable AI
+
+↓
+
+Dashboard
+```
+
+---
+
+#  Technology Stack
+
+## Languages
+
+- Python
+- SQL
+
+---
+
+## Database
+
+- PostgreSQL
+- pgvector
+- Redis
+
+---
+
+## Backend
+
+- FastAPI
+- SQLAlchemy
+- AsyncIO
+
+---
+
+## Blockchain
+
+- Web3.py
+- Solana-py
+- Alchemy
+- QuickNode
+- The Graph
+
+---
+
+## Data Engineering
+
+- Apache Kafka
+- Airflow
+- dbt
+
+---
+
+## Machine Learning
+
+- Scikit-Learn
+- XGBoost
+- PyTorch
+- PyTorch Geometric
+- NetworkX
+
+---
+
+## AI
+
+- LangChain
+- OpenAI
+- Hugging Face
+- Sentence Transformers
+
+---
+
+## Dashboard
+
+- Streamlit
+- Plotly
+
+---
+
+## Deployment
+
+- Docker
+- GitHub Actions
+- AWS
+- Render
+
+---
+
+#  Project Structure
+
+```
+DeFiGuard-AI/
+
+│
+├── app/
+│
+├── dashboard/
+│
+├── ingestion/
+│
+├── pipelines/
+│
+├── database/
+│
+├── analytics/
+│
+├── embeddings/
+│
+├── models/
+│
+├── gnn/
+│
+├── rag/
+│
+├── llm/
+│
+├── alerts/
+│
+├── api/
+│
+├── notebooks/
+│
+├── docs/
+│
+├── docker/
+│
+├── tests/
+│
+├── config/
+│
+└── README.md
+```
+
+---
+
+#  Core Modules
+
+- Blockchain Listener
+- Data Pipeline
+- SQL Analytics Engine
+- Vector Database
+- Risk Engine
+- Fraud Detection
+- Behavioral Analytics
+- Graph Intelligence
+- LLM Interface
+- Dashboard
+- Alert Engine
+
+---
+
+#  Future Roadmap
+
+## Phase 1
+
+- Ethereum Support
+- PostgreSQL
+- Dashboard
+
+---
+
+## Phase 2
+
+- Real-Time Streaming
+- AI Risk Scoring
+- Fraud Detection
+
+---
+
+## Phase 3
+
+- Vector Search
+- Wallet Intelligence
+- LLM Assistant
+
+---
+
+## Phase 4
+
+- Multi-Chain Support
+- Solana
+- Polygon
+- Base
+- Arbitrum
+
+---
+
+## Phase 5
+
+- Graph Neural Networks
+- Knowledge Graph
+- Explainable AI
+
+---
+
+## Phase 6
+
+- AI Agents
+- Autonomous Investigation
+- Predictive Fraud
+- Production Deployment
+
+---
+
+#  Expected Scale
+
+- Millions of blockchain transactions
+- Real-time streaming
+- Multi-chain architecture
+- Production-ready SQL
+- Vector Search
+- AI-powered analytics
+
+---
+
+#  Skills Demonstrated
+
+✔ Advanced SQL
+
+✔ Database Design
+
+✔ Feature Engineering
+
+✔ Data Engineering
+
+✔ Real-Time Streaming
+
+✔ Machine Learning
+
+✔ Deep Learning
+
+✔ Graph Neural Networks
+
+✔ Vector Databases
+
+✔ Generative AI
+
+✔ RAG
+
+✔ LLM Integration
+
+✔ Explainable AI
+
+✔ Blockchain Analytics
+
+✔ Dashboard Development
+
+✔ Docker
+
+✔ Cloud Deployment
+
+---
+
+#  Why This Project Matters
+
+The blockchain industry is rapidly evolving toward AI-assisted analytics. As transaction volumes increase and financial attacks become more sophisticated, organizations need intelligent systems that can analyze behavior instead of relying only on predefined rules.
+
+DeFiGuard AI demonstrates how SQL, Machine Learning, Graph Analytics, Vector Search, and Large Language Models can work together to build a modern blockchain intelligence platform suitable for fintech, Web3, and AI-driven financial applications.
+
+---
+
+#  License
+
+MIT License
+
+---
+
+<div align="center">
+
+
+Built with ❤️ using AI, Data Science, Machine Learning, and Modern Data Engineering.
+
+</div>
